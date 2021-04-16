@@ -1,1 +1,13 @@
+0. Install gcloud
+  sudo yum install -y python3.x86_64  
+  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-336.0.0-linux-x86_64.tar.gz
+  tar -zxvf google-cloud-sdk-336.0.0-linux-x86_64.tar.gz
+  ./google-cloud-sdk/install.sh
+  ./google-cloud-sdk/bin/gcloud init
 
+1. Install terraform
+  sudo yum install -y yum-utils
+  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+  sudo yum -y install terraform
+  terraform -v
+  terraform -install-autocomplete
