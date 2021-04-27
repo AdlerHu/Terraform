@@ -3,14 +3,14 @@
 
 https://learn.hashicorp.com/collections/terraform/gcp-get-started
 
-0. Install gcloud and terraform
-1. Setting up GCP
-  a. Create Project
-  b. Enable Compute Engine API
-  c. Service Account Key
-3. Build Infrastructure
-4. Change Infrastructure
-5. Create Resource Dependencies
-6. Provision Infrastructure
-7. Define Input Variables
-8. Query Data with Output Variables
+I. Install gcloud and terraform
+II. Setting up GCP
+  0. Create Project
+  1. Enable Compute Engine API
+  2. Service Account Key
+III. Build Infrastructure
+IV. Change Infrastructure
+V. Create Resource Dependencies
+VI. Provision Infrastructure
+VII. Define Input Variables
+VIII. Query Data with Output Variables
