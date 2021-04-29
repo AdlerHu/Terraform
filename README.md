@@ -1,7 +1,8 @@
 # Terraform
-# GCP
 
-https://learn.hashicorp.com/collections/terraform/gcp-get-started
+用腳本生成、管理、刪除雲端資源，以GCP為例
+
+官方文檔: https://learn.hashicorp.com/collections/terraform/gcp-get-started
 
 0. Install gcloud and terraform
 1. Setting up GCP
