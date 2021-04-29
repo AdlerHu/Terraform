@@ -116,3 +116,49 @@ resource "google_compute_firewall" "ssh" {
   priority = 1000
   source_tags = ["ssh"]
 }
+
+# create VM instance
+resource "google_compute_instance" "instance0" {
+  name         = "instance0"
+  machine_type = "e2-small"
+  zone         = var.zone
+
+  tags = ["ssh", "http", "https", "ping"]
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+  
+  metadata_startup_script = "mkdir /tmp/adler/"
+  
+  network_interface {
+    network = google_compute_network.vpc_network.name
+    access_config {
+    }
+  }
+}
+
+# create another VM instance
+resource "google_compute_instance" "instance1" {
+  name         = "instance1"
+  machine_type = "e2-small"
+  zone         = var.zone
+
+  tags = ["ssh", "http", "https", "ping"]
+
+  boot_disk {
+    initialize_params {
+      image = "ubuntu-os-pro-cloud/ubuntu-pro-2004-lts"
+    }
+  }
+  
+  metadata_startup_script = "mkdir /tmp/adler/"
+  
+  network_interface {
+    network = google_compute_network.vpc_network.name
+    access_config {
+    }
+  }
+}
